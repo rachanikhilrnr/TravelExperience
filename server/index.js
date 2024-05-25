@@ -4,10 +4,16 @@ const cors = require('cors')
 
 const postModel = require('./models/post');
 
-const port = "https://travel-experience-backend.vercel.app/";
+const port = 5000;
 
 const app = express();
-app.use(cors());
+app.use(cors(
+    {
+        origin:[""],
+        method:["POST","GET"],
+        credentials:true
+    }
+));
 app.use(express.json());
 
 mongoose.connect(
