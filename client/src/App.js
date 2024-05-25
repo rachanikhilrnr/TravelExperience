@@ -8,12 +8,12 @@ function App() {
   const [content,setContent] = useState();
   const [post,setPost] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:5000")
+    axios.get("https://travel-experience-backend.vercel.app/")
     .then(posts => {setPost(posts.data)})
     .catch(err => {console.log(err)})
   },[]);
   const submitForm=() => {
-    axios.post("http://localhost:5000",{place,date,budget,content})
+    axios.post("https://travel-experience-backend.vercel.app/",{place,date,budget,content})
   }
   return (
     <>
