@@ -4,7 +4,7 @@ const cors = require('cors')
 
 const postModel = require('./models/post');
 
-const port = 3000;
+const port = process.evn.PORT || 5000;
 
 const app = express();
 app.use(cors(
