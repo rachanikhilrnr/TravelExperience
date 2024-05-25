@@ -4,7 +4,7 @@ const cors = require('cors')
 
 const postModel = require('./models/post');
 
-const port = 5000;
+const port = 3000;
 
 const app = express();
 app.use(cors(
