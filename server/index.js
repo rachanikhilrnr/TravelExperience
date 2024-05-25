@@ -4,7 +4,7 @@ const cors = require('cors')
 
 const postModel = require('./models/post');
 
-const port = 5000;
+const port = "https://travel-experience-backend.vercel.app/";
 
 const app = express();
 app.use(cors());
