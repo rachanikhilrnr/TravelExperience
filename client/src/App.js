@@ -8,12 +8,12 @@ function App() {
   const [content,setContent] = useState();
   const [post,setPost] = useState([]);
   useEffect(() => {
-    axios.get("https://travel-experience-backend.vercel.app/")
+    axios.get("https://backend-fawn-rho-25.vercel.app/getInfo")
     .then(posts => {setPost(posts.data)})
     .catch(err => {console.log(err)})
   },[]);
   const submitForm=() => {
-    axios.post("https://travel-experience-backend.vercel.app/",{place,date,budget,content})
+    axios.post("https://backend-fawn-rho-25.vercel.app/getInfo",{place,date,budget,content})
   }
   return (
     <>
