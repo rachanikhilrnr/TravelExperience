@@ -28,7 +28,7 @@ app.get('/',(req,res) => {
     .catch(error => res.json(error))
 })
 
-app.post('',(req,res) => {
+app.post('/post',(req,res) => {
     try {
         const input = req.body;
         const data = new postModel(input);
