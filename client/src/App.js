@@ -8,12 +8,12 @@ function App() {
   const [content,setContent] = useState();
   const [post,setPost] = useState([]);
   useEffect(() => {
-    axios.get("https://localhost:5000/getInfo")
+    axios.get("https://backend-zeta-lovat.vercel.app/")
     .then(posts => {setPost(posts.data)})
     .catch(err => {console.log(err)})
   },[]);
   const submitForm=() => {
-    axios.post("https://localhost:5000/getInfo",{place,date,budget,content})
+    axios.post("https://backend-zeta-lovat.vercel.app/",{place,date,budget,content})
   }
   return (
     <>
