@@ -22,13 +22,13 @@ mongoose.connect(
 .then(() => console.log("MongoDb connected Successfully"))
 .catch((err) => console.log(err));
 
-app.get('/',(req,res) => {
+app.get('/post',(req,res) => {
     postModel.find({})
     .then(users => res.json(users))
     .catch(error => res.json(error))
 })
 
-app.post('/post',(req,res) => {
+app.post('',(req,res) => {
     try {
         const input = req.body;
         const data = new postModel(input);
