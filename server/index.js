@@ -9,7 +9,7 @@ const port = 5000;
 const app = express();
 app.use(cors(
     {
-        origin:["https://backend-zeta-lovat.vercel.app/"],
+        origin:["https://travel-experience-frontend.vercel.app/"],
         method:["POST","GET"],
         credentials:true
     }
