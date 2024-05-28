@@ -11,6 +11,7 @@ app.use(cors(
     {
         origin:["https://travel-experience-frontend.vercel.app/post"],
         method:["POST","GET"],
+        allowedHeaders: ['Content-Type', 'Authorization'],
         credentials:true
     }
 ));
