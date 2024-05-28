@@ -1,26 +1,13 @@
 {
-    "version": 2,
-    "builds": [
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
         {
-            "src": "*.js",
-            "use": "@vercel/node"
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://travel-experience-frontend.vercel.app"
         }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/"
-        }
-    ]
-    "headers": [
-        {
-          "source": "/(.*)",
-          "headers": [
-            {
-              "key": "Access-Control-Allow-Origin",
-              "value": "https://travel-experience-frontend.vercel.app"
-            }
-          ]
-        }
-    ]
+      ]
+    }
+  ]
 }
