@@ -7,11 +7,15 @@ function App() {
   const [budget,setBudget] = useState();
   const [content,setContent] = useState();
   const [post,setPost] = useState([]);
+
+  axios.default.withCredentials = true;
+  
   useEffect(() => {
     axios.get("https://backend-zeta-lovat.vercel.app/post")
     .then(posts => {setPost(posts.data)})
     .catch(err => {console.log(err)})
   },[]);
+  
   const submitForm=() => {
     axios.post("https://backend-zeta-lovat.vercel.app/post",{place,date,budget,content})
   }
