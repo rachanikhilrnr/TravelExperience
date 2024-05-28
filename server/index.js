@@ -9,7 +9,7 @@ const port = 5000;
 const app = express();
 app.use(cors(
     {
-        origin:["https://travel-experience-frontend.vercel.app/post","https://localhost:5000"],
+        origin:["https://travel-experience-frontend.vercel.app/post"],
         method:["POST","GET"],
         credentials:true
     }
