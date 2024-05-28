@@ -11,13 +11,13 @@ function App() {
   axios.default.withCredentials = true;
   
   useEffect(() => {
-    axios.get("https://backend-zeta-lovat.vercel.app/post")
+    axios.get("backend-zeta-lovat.vercel.app/post")
     .then(posts => {setPost(posts.data)})
     .catch(err => {console.log(err)})
   },[]);
   
   const submitForm=() => {
-    axios.post("https://backend-zeta-lovat.vercel.app/post",{place,date,budget,content})
+    axios.post("backend-zeta-lovat.vercel.app/post",{place,date,budget,content})
   }
   return (
     <>
