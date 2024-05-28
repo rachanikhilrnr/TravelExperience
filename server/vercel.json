@@ -12,4 +12,10 @@
             "dest": "/"
         }
     ]
+    "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://travel-experience-frontend.vercel.app"
+        }
+      ]
 }
